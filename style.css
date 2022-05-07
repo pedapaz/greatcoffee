@@ -1,0 +1,296 @@
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+}
+ nav{
+   display: flex;
+   justify-content: space-between;
+}
+a{
+  text-decoration: none;
+}
+.grid{
+  height: 0;
+}
+
+.button{
+  font-family: 'Manrope';
+  font-weight: 800;
+  font-size: 0.6875rem;
+  padding: 0.5rem 1.86rem;
+  border: 1px solid var(--button);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  transition: 0.3s;
+  z-index: 1;
+}
+.button:hover{
+  background: var(--button);
+}
+.logo{
+  font-size: 2.05rem;
+}
+.icon-menu-buguer-open
+{
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+.icon-menu-buguer-close{
+  cursor: pointer;
+}
+
+
+.icon-arrow{
+  margin-left: 0.5rem;
+}
+
+#header{
+  position: fixed;
+ padding: 2.3rem;
+ top: 0;
+ left: 0;
+ right: 0;
+ border-bottom: 1px solid var(--border-menu-mobile);
+ background: var(--backgrond);
+ z-index: 2;
+}
+
+#text{
+position: relative;
+margin-top: 11rem;
+text-align: center;
+}  
+
+#text h1{
+  font-family:'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 1.875rem;
+  color: var(--text-color);
+  
+}
+.meio{
+margin-top: 5.5rem;
+text-align: center;
+}
+
+#slogan .normal{
+font-family: 'Manrope';
+font-weight: 700;
+z-index: 1;
+color: var(--text-color);
+margin-top: 5rem;
+}
+#slogan .roxo{
+  font-family: 'Manrope';
+font-weight: 700;
+z-index: 1;
+color: var(--button);
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke-width: 2px;
+margin-top: -3rem;
+}
+h2{
+  font-size: 2.7rem;
+  text-align: center;
+
+}
+
+
+#image div{
+  display: flex;
+}
+#image .antes{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -7rem;
+  left: 0;
+  max-height: 500px;
+  z-index: -1;
+}
+#image .depois{
+  position: absolute;
+  width: 100%;
+  bottom: -7rem;
+  left: 0;
+  z-index: -1;
+}
+#image .direita, #image .esquerda{
+display: none;}
+
+
+body{
+  background: var(--backgrond);
+}
+
+
+nav .menu{
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+
+nav.show .menu{
+background: var(--backgrond);
+margin-top: 4.4rem;
+display: grid;
+height: 100vh;
+width: 100vw;
+left:0;
+position: fixed;
+opacity: 1;
+visibility: visible;
+transition: 0.3s;
+
+}
+nav.show .menu ul{
+display: grid;
+gap: 2rem;
+list-style: none;
+padding-inline-start: 0;
+ 
+}
+nav.show .menu ul li{
+border-bottom: 1px solid var(--border-menu-mobile);
+height: 3.5625rem;
+}
+
+
+nav .menu ul li a{
+  font-family: 'Manrope';
+  font-weight: 400;
+  color: var(--text-color-menu-mobile);
+  transition: 0.3s;
+  padding: 2rem 160rem 2.3rem 1.93rem;
+  
+}
+
+nav .menu ul li a:hover{
+  font-family: 'Manrope';
+  font-weight: 700;
+  background:var(--button);
+}
+nav .icon-menu-buguer-open{
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  right: 2rem;
+  top: 2.8rem;
+
+}
+nav.show .icon-menu-buguer-open{
+  opacity: 0;
+  visibility: hidden;
+}
+nav .icon-menu-buguer-close{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 2rem;
+  top: 2.5rem;
+}
+nav.show .icon-menu-buguer-close{
+  opacity: 1;
+  visibility: visible;
+}
+
+@media(min-width: 1200px){
+  #header{
+    border-bottom: none;
+    padding: 0;
+  }
+  h1{
+    display: none;
+  }
+  h2{
+    font-size: 6.8rem;
+  }
+  #header nav .menu{
+z-index: 1;
+left: 34%;
+right: 34%;
+min-width: 30rem;
+}
+  nav .menu{
+    opacity: 1;
+  }
+  nav .menu ul{
+display: flex;
+gap: 2rem;
+margin-top: 4rem;
+  }
+  .path1, .path2, .path3, .path4, .path5, .path6, .path7, .path8, .path9, .path10{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .logo{
+font-size: 3.125rem;
+position: absolute;
+left: 45%;
+top: 3rem; 
+ }
+  nav .menu ul li a {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    padding: 0;
+  }
+  nav .icon-menu-buguer-open{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .button{
+    position: absolute;
+    min-width: 10.75rem;
+    top: 3.5rem;
+    right: 29%;
+    left: 71%;
+  }
+  #slogan .normal{
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    top: 4.5rem;
+    }
+  #slogan .roxo{
+    margin-top: 15rem;
+  left: 20%;
+    right: 20%;
+}
+#image .depois{
+  position: absolute;
+  width: 50%;
+  bottom:0rem;
+  left: 27%;
+  right: 30%;
+  z-index: -1;
+  max-height: 30rem;
+}
+#image .antes{
+  display: none;
+}
+#image .direita{
+  bottom: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+#image .esquerda{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+nav .menu ul li a:hover{
+  background: none;
+}
+
+
+}
